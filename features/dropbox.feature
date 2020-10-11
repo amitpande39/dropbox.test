@@ -4,5 +4,5 @@ Feature: Dropbox Upload Document Testing
     Given I navigate to dropbox login page
     When I enter email address in email field with "amitpande99@outlook.com" and password with "chiki3939"
     And I have logged in to my dropbox account successfully
-    And I create a new "test" folder 
+    And I create a new "Bills" folder 
     Then I upload multiple documents to test folder successfully

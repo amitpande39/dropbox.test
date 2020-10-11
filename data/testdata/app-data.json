@@ -3,11 +3,9 @@
     "userInitials": "AP"
   },
   "mobileBill": {
-    "docName": "MobileBill.pdf",
     "docPath": "data/filesToUpload/MobileBill.pdf"
   },
   "powerBill": {
-    "docName": "ElectricityBill.pdf",
     "docPath": "data/filesToUpload/ElectricityBill.pdf"
   }
 }

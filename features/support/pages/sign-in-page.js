@@ -24,8 +24,8 @@ exports.signInPage = {
       boundTestRun: testController,
     });
   },
-  accountMenu: function () {
-    return Selector('.account-menu-v2__avatar span').with({
+  notificationBellIcon: function () {
+    return Selector('.notification-button-bell-container').with({
       boundTestRun: testController,
     });
   },

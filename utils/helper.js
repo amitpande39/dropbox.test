@@ -13,9 +13,9 @@ exports.helper = {
       : 0;
   },
 
-  async uploadDocument(docName, docPath, numOfUploadedDocs) {
-    await testController.wait(10000);
-    await testController.click(await userPersonalPage.uploadFile());
+  async uploadDocument(docPath, numOfUploadedDocs) {
+    await testController.wait(Number(process.env.PAGE_LOAD_TIMEOUT));
+    await testController.click(await userPersonalPage.uploadFileLink());
     await testController
       .setFilesToUpload(Selector(userPersonalPage.inputFile()), [docPath])
       .wait(Number(process.env.PAGE_LOAD_TIMEOUT));

@@ -2,7 +2,7 @@ const { signInPage } = require('../support/pages/sign-in-page');
 const { homePage } = require('../support/pages/home-page');
 const dotenv = require('dotenv');
 const { Given, When, Then } = require('cucumber');
-const { ClientFunction, Selector, t } = require('testcafe');
+const { ClientFunction } = require('testcafe');
 const appData = require('../../data/testdata/app-data.json');
 const { userPersonalPage } = require('../support/pages/user-personal-page');
 const { helper } = require('../../utils/helper');
@@ -33,22 +33,20 @@ When(
 When(
   /^I have logged in to my dropbox account successfully$/,
   async function () {
-    await testController
-      .expect(signInPage.accountMenu().textContent)
-      .contains(appData.userDetails.userInitials, {
-        timeout: Number(process.env.ASSERTION_TIMEOUT),
-      });
+    await testController.expect(signInPage.notificationBellIcon().exists).ok({
+      timeout: Number(process.env.ASSERTION_TIMEOUT),
+    });
   }
 );
 When(/^I create a new \"([^\"]*)\" folder$/, async function (folderName) {
-  await testController.click(userPersonalPage.createNewFolder());
+  await testController.click(userPersonalPage.createNewFolderLink());
   await testController
     .maximizeWindow()
-    .typeText(userPersonalPage.inputNewFolderName(), folderName + Date.now())
+    .typeText(userPersonalPage.enterNewFolderName(), folderName + Date.now())
     .click(userPersonalPage.createButton())
     .expect(userPersonalPage.folderTitle().textContent)
-    .contains('test')
-    .expect(userPersonalPage.uploadFile().exists)
+    .contains(folderName)
+    .expect(userPersonalPage.uploadFileLink().exists)
     .ok();
 });
 
@@ -57,7 +55,6 @@ Then(
   async function () {
     let setNumOfUploadedDocs = 1;
     await helper.uploadDocument(
-      appData.mobileBill.docName,
       appData.mobileBill.docPath,
       setNumOfUploadedDocs
     );
@@ -70,7 +67,6 @@ Then(
       .ok({ timeout: Number(process.env.ASSERTION_TIMEOUT) });
     setNumOfUploadedDocs += 1;
     await helper.uploadDocument(
-      appData.powerBill.docName,
       appData.powerBill.docPath,
       setNumOfUploadedDocs
     );

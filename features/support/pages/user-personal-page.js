@@ -14,7 +14,7 @@ exports.userPersonalPage = {
       boundTestRun: testController,
     });
   },
-  uploadFile: function () {
+  uploadFileLink: function () {
     return Selector(
       '.uee-AppActionsView-SecondaryActionMenu-text-upload-file'
     ).with({
@@ -39,7 +39,7 @@ exports.userPersonalPage = {
       });
   },
 
-  createNewFolder: function () {
+  createNewFolderLink: function () {
     return Selector(
       '.uee-AppActionsView-SecondaryActionMenu-text-new-folder'
     ).with({
@@ -57,7 +57,7 @@ exports.userPersonalPage = {
       boundTestRun: testController,
     });
   },
-  inputNewFolderName: function () {
+  enterNewFolderName: function () {
     return Selector('#new_folder_name_input[type="text"]').with({
       boundTestRun: testController,
     });
