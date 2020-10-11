@@ -13,6 +13,7 @@
 # Assumption
 
 - Test has been run on MAC machine so it is exptected to run it on MAC machine
+- It is assumed that the host has already logged to dropbox using the follwing credential (Email: amitpande99@outloo.com, Password: chiki3939), this is to avoid captcha very first time user logs in to dropbox when runing test.
 
 # Test Execution
 
