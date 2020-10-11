@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/amitpande39/dropbox.test.git"
+    "url": "https://github.com/amitpande39/dropbox.test.git"
   },
   "author": "Amit Pande",
   "license": "ISC",
