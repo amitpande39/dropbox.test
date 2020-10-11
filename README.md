@@ -7,7 +7,7 @@
 - Upload multiple Documents
 - Assertions
   - User is logged successfully
-  - Folder Created
+  - Folder is created
   - Document uploaded and matched the total of expected count
 
 # Assumption
@@ -24,3 +24,5 @@
 * Open the project in VSCode
 * Perform `npm install` from root directory
 * Perform `npm test` to execute tests
+
+# Limitation
