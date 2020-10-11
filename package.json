@@ -1,0 +1,37 @@
+{
+  "name": "dropbox-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amitpande39/dropbox.test.git"
+  },
+  "author": "Amit Pande",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amitpande39/dropbox.test/issues"
+  },
+  "homepage": "https://github.com/amitpande39/dropbox.test#readme",
+  "scripts": {
+    "test": "./node_modules/.bin/cucumber-js",
+    "test-report": "./node_modules/.bin/cucumber-js --format json:./reports/report.json",
+    "test-chrome": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"chrome\\\"}\"",
+    "test-safari": "./node_modules/.bin/cucumber-js.cmd  --world-parameters \"{\\\"browser\\\": \\\"safari\\\"}\""
+  },
+  "devDependencies": {
+    "base64-img": "^1.0.4",
+    "cucumber": "^5.1.0",
+    "cucumber-html-reporter": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "eslint": "^4.19.1",
+    "eslint-config-google": "^0.9.1",
+    "multiple-cucumber-html-reporter": "^1.18.0",
+    "npm": "^6.0.0",
+    "path": "^0.12.7",
+    "testcafe": "^1.9.4",
+    "testcafe-cucumber-steps": "^1.13.2",
+    "testcafe-reporter-cucumber-json": "^6.2.0",
+    "testcafe-reporter-html": "^1.4.6"
+  }
+}
