@@ -1,7 +1,4 @@
 {
-  "userDetails": {
-    "userInitials": "AP"
-  },
   "mobileBill": {
     "docPath": "data/filesToUpload/MobileBill.pdf"
   },
