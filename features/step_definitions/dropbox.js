@@ -10,7 +10,7 @@ const { helper } = require('../../utils/helper');
 dotenv.config();
 
 Given(/^I navigate to dropbox login page$/, async function () {
-  await testController.navigateTo(signInPage.url());
+  await testController.navigateTo(process.env.BASE_URL);
   await testController
     .expect(homePage.loginLink().exists)
     .ok({ timeout: Number(process.env.PAGE_LOAD_TIMEOUT) });

@@ -1,9 +1,6 @@
 const { Selector } = require('testcafe');
 
 exports.signInPage = {
-  url: function () {
-    return 'https://www.dropbox.com/register';
-  },
   emailTextbox: function () {
     return Selector("[name='login_email']").with({
       boundTestRun: testController,
